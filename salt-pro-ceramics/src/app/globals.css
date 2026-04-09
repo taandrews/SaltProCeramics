@@ -1,0 +1,170 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Paper / surfaces */
+  --color-paper: #ffffff;
+  --color-paper-warm: #fafaf7;
+  --color-paper-cool: #f6f8fa;
+
+  /* Ink (from logo dark navy) */
+  --color-ink: #0e2540;
+  --color-ink-deep: #061629;
+  --color-ink-soft: #3a4a5e;
+  --color-ink-mute: #6b7a8d;
+  --color-ink-faint: #a8b2bf;
+
+  /* Hairlines */
+  --color-rule: #e6eaee;
+  --color-rule-soft: #eef1f4;
+
+  /* Aqua accent (from logo cyan) */
+  --color-aqua: #2aabe2;
+  --color-aqua-deep: #1e8fbf;
+  --color-aqua-pale: #eef7fc;
+
+  /* Fonts */
+  --font-display: 'Fraunces', 'Times New Roman', serif;
+  --font-body: 'Hanken Grotesk', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  background: var(--color-paper);
+  font-feature-settings: "ss01", "cv11";
+}
+
+/* ── Display headline tuning ── */
+.display {
+  font-family: var(--font-display);
+  font-feature-settings: "ss01", "ss02";
+  font-variation-settings: "opsz" 144, "SOFT" 30, "WONK" 0;
+  letter-spacing: -0.025em;
+  line-height: 0.92;
+}
+
+.display-soft {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-variation-settings: "opsz" 144, "SOFT" 60, "WONK" 1;
+  font-weight: 400;
+}
+
+/* Small caps eyebrow */
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-ink-mute);
+}
+
+/* Tabular numerals for specs */
+.tabular {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+/* ── Animations ── */
+@keyframes rise {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes riseSm {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes drift {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes draw {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+.animate-rise { animation: rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.animate-rise-sm { animation: riseSm 0.7s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.animate-fade { animation: fade 0.8s ease-out both; }
+.animate-drift { animation: drift 6s ease-in-out infinite; }
+.animate-draw {
+  animation: draw 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+  transform-origin: left;
+}
+
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-600 { animation-delay: 600ms; }
+.delay-700 { animation-delay: 700ms; }
+.delay-800 { animation-delay: 800ms; }
+
+/* ── Refined link/btn underline ── */
+.link-line {
+  position: relative;
+  display: inline-block;
+}
+.link-line::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 1px;
+  background: currentColor;
+  transform-origin: right;
+  transform: scaleX(1);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.link-line:hover::after {
+  transform-origin: left;
+  transform: scaleX(0);
+  animation: draw 0.5s 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* ── Hairline frame ── */
+.hairline-top { border-top: 1px solid var(--color-rule); }
+.hairline-bot { border-bottom: 1px solid var(--color-rule); }
+
+/* ── Custom scrollbar ── */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--color-paper); }
+::-webkit-scrollbar-thumb {
+  background: var(--color-rule);
+  border: 2px solid var(--color-paper);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--color-aqua); }
+
+/* ── Selection ── */
+::selection {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
+/* ── Subtle grid background ── */
+.grid-faint {
+  background-image:
+    linear-gradient(var(--color-rule-soft) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-rule-soft) 1px, transparent 1px);
+  background-size: 80px 80px;
+  background-position: -1px -1px;
+}
