@@ -43,7 +43,7 @@ const applicationSteps = [
 ];
 
 const benefits = [
-  { title: "Water & Oil Repellency", desc: "Highly hydrophobic — water and oil bead and roll off on contact." },
+  { title: "Water & Oil Repellency", desc: "Highly hydrophobic. Water and oil bead and roll off on contact." },
   { title: "Rust & Corrosion Resistance", desc: "Nano-barrier against oxidation and saltwater corrosion." },
   { title: "Chemical Resistance", desc: "Withstands harsh marine chemicals and cleaning agents." },
   { title: "UV Resistance", desc: "Shields metal from UV degradation and sun damage." },
@@ -87,7 +87,7 @@ export default function MarineMetalGuardPage() {
               </h1>
               <p className="animate-rise delay-200 mt-6 sm:mt-10 text-base sm:text-lg lg:text-xl text-ink-soft leading-[1.6] max-w-lg font-light">
                 A one-component rust and corrosion-resistant nano coating that
-                protects boat and yacht metal — above and below the waterline —
+                protects boat and yacht metal, above and below the waterline,
                 against the harshest marine conditions.
               </p>
 
@@ -179,7 +179,7 @@ export default function MarineMetalGuardPage() {
               </h2>
               <p className="mt-6 sm:mt-8 text-ink-soft text-base sm:text-lg leading-[1.65] font-light">
                 Salt Pro Marine Metal Guard makes the surface highly repellent
-                and resistant to water — protecting metal from UV, salt, and
+                and resistant to water, protecting metal from UV, salt, and
                 stains, with an easy-clean effect and a deep optical shine.
               </p>
 
@@ -261,7 +261,7 @@ export default function MarineMetalGuardPage() {
             <div className="lg:col-span-7">
               <p className="text-paper/60 text-base sm:text-lg leading-[1.65] font-light max-w-xl mb-8 sm:mb-10">
                 Marine Metal Guard is engineered for any metal surface that meets
-                marine conditions — from anchor chains to deck fittings.
+                marine conditions, from anchor chains to deck fittings.
               </p>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-3">
                 {[

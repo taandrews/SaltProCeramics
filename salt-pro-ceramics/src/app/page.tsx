@@ -18,7 +18,7 @@ const principles = [
   {
     n: "02",
     title: "Nano-Scale Bond",
-    body: "An 800–1100 nm covalent layer fuses with the substrate. The result is a surface that behaves like glass — repellent, chemically inert, and optically clear.",
+    body: "An 800–1100 nm covalent layer fuses with the substrate. The result is a surface that behaves like glass: repellent, chemically inert, and optically clear.",
   },
   {
     n: "03",
@@ -33,7 +33,7 @@ const principles = [
   {
     n: "05",
     title: "Tested on Working Vessels",
-    body: "Validated by commercial fleets in the Atlantic and Mediterranean — not in laboratory conditions, but where corrosion happens.",
+    body: "Validated by commercial fleets in the Atlantic and Mediterranean, not in laboratory conditions, but where corrosion happens.",
   },
   {
     n: "06",
@@ -60,7 +60,7 @@ export default function Home() {
           <source src={asset("/hero.mp4")} type="video/mp4" />
         </video>
 
-        {/* Gradient overlays — strong on left for legibility, lighter on right to show video */}
+        {/* Gradient overlays: strong on left for legibility, lighter on right to show video */}
         <div className="absolute inset-0 bg-gradient-to-r from-ink-deep/90 via-ink-deep/45 to-ink-deep/15" />
         <div className="absolute inset-0 bg-gradient-to-b from-ink-deep/40 via-transparent to-ink-deep/70" />
 
@@ -176,7 +176,7 @@ export default function Home() {
               </h2>
               <p className="mt-5 sm:mt-6 text-ink-soft text-base sm:text-lg leading-[1.65] font-light max-w-2xl">
                 A single-component nano coating that creates a permanent
-                hydrophobic barrier on marine metals — anchors, rails, cleats,
+                hydrophobic barrier on marine metals: anchors, rails, cleats,
                 fittings. Validated by working fleets across three oceans.
               </p>
             </div>
@@ -262,7 +262,7 @@ export default function Home() {
               </h2>
               <p className="mt-6 sm:mt-8 text-ink-soft text-base sm:text-lg leading-[1.65] font-light max-w-lg">
                 A one-component rust and corrosion-resistant nano coating that
-                protects marine metal — both above and below the waterline —
+                protects marine metal, both above and below the waterline,
                 against salt, UV, oxidation, and chemical exposure.
               </p>
 
@@ -310,8 +310,8 @@ export default function Home() {
             <div className="lg:col-span-6 lg:col-start-7 lg:pt-8">
               <p className="text-ink-soft text-base sm:text-lg leading-[1.65] font-light">
                 We do not compete with marine waxes. We replaced them. Salt Pro
-                Ceramics is built on six commitments — from formulation to field
-                application — that make it the standard for vessel protection
+                Ceramics is built on six commitments, from formulation to field
+                application, that make it the standard for vessel protection
                 worldwide.
               </p>
             </div>

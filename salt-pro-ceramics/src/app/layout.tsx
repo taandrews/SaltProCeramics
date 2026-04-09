@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Salt Pro Ceramics — Marine Protection Compound",
+  title: "Salt Pro Ceramics | Marine Protection Compound",
   description:
     "Industry-leading nano ceramic protection for marine surfaces. Engineered for the world's harshest environments.",
 };

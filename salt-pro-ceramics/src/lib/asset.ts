@@ -2,7 +2,7 @@
  * Prefix a public asset path with the configured basePath, if any.
  *
  * Use this for raw HTML tags like <video>, <source>, <img>, and inline
- * background-image url()s — Next.js does NOT auto-prefix these.
+ * background-image url()s. Next.js does NOT auto-prefix these.
  *
  * `next/image` and `next/link` handle the basePath automatically.
  */
